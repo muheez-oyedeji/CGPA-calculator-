@@ -1,0 +1,125 @@
+button{
+    cursor:pointer 
+}
+button:hover {
+    background-color: #93c5fd;
+}
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top:16px
+}
+#courseInputs {
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+.course-row {
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #dbeafe;
+    border: 1px solid #93c5fd;
+}
+.app-header {
+    background-color: #dbeafe;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #93c5fd;
+      text-align: center;
+    margin-bottom: 15px;
+}
+.calculator-card {
+    background-color: #eff6ff;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #93c5fd;
+}
+#addCourseButton,
+#calculateButton {
+    background-color: #3b82f6;
+    color: white;
+    margin:5px;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: 0.2s;
+}
+#addCourseButton:hover,
+#calculateButton:hover {
+    background-color: #1d4ed8;
+}
+#addCourseButton:active,
+#calculateButton:active {
+    transform: scale(0.97);
+}
+body.dark-mode {
+    background-color: #0b1120;
+}
+#themeToggle {
+    background-color: #172554;
+    color: white;
+
+}
+body.dark-mode #themeToggle {
+    background-color: #f8fafc;
+    color: #172554;
+}
+#themeToggle {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+body.dark-mode .app-header {
+    background-color: #172554;
+    border-color: #3b82f6;
+    color: #f8fafc;
+}
+body.dark-mode .calculator-card {
+    background-color: #172554;
+    border-color: #3b82f6;
+    color: #f8fafc;
+}
+body.dark-mode #courseInputs {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+body.dark-mode .course-row {
+    background-color: #1e293b;
+    border-color: #3b82f6;
+}
+body.dark-mode .courseCode,
+body.dark-mode .unit,
+body.dark-mode .grade {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #475569;
+}
+.removeCourseButton {
+    margin-top: 12px;
+    margin-left: 8px;
+}
+.removeCourseButton {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.removeCourseButton:hover {
+    background-color: #fecaca;
+    border-color: #f87171;
+    transform: translateY(-2px);
+}

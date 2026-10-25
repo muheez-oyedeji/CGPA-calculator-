@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CGPA calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="app-container">
+
+        <header class="app-header">
+            <div>
+                <h1>CGPA Calculator</h1>
+                <p class="subtitle">Track your grades. Plan your future.</p>
+            </div>
+
+            <button id="themeToggle" type="button">
+                🌙 Dark Mode
+            </button>
+        </header>
+<main>
+            <section class="calculator-card">
+                <h2>Enter Your Courses</h2>
+                <p class="section-description">
+                    Add your courses, units and grades below.
+                </p>
+        <div id="courseInputs">
+            <div class="course-row">
+            <input type="text" class = "courseCode" placeholder="coursecode" >
+            <input type="number" class ="unit" placeholder="no of unit">
+            <select class ="grade">
+                <option value="5">A</option>
+                <option value="4">B</option>
+                <option value="3">C</option>
+                <option value="2">D</option>
+                <option value="1">E</option>
+                <option value="0">F</option>
+            </select>
+            </div>
+        </div>
+            <button id="addCourseButton" type= "button">Add Course</button>
+            <button id="calculateButton" type="button">calculate CGPA</button>
+            <div id="courselist"></div>
+             <div class="result-card">
+                    <p>Your CGPA</p>
+                    <p id="cgpaResult">0.00</p>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
