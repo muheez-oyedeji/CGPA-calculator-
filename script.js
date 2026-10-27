@@ -31,7 +31,7 @@ newRow.innerHTML += `<button type="button" class="removeCourseButton">Remove</bu
  courseInputs.appendChild(newRow);
 })
 
-function calculateCGPA(){
+function calculateCGPA(){ 
     let totalUnits = 0;
 let totalGradePoints = 0;
 
