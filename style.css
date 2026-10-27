@@ -25,7 +25,7 @@ button:hover {
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
-     justify-content: flex-start;
+     justify-content: space-evenly;
 }
 .app-header {
     background-color: #dbeafe;
@@ -141,4 +141,11 @@ body.dark-mode .grade {
     width: 60px;
     height:36px;
     box-sizing:border-box;
+}
+.courseCode,
+.unit,
+.grade {
+    border-radius: 8px;
+    padding: 8px;
+    border:1px solid #93c5fd;
 }
