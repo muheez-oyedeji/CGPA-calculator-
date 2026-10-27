@@ -21,6 +21,11 @@ button:hover {
     border-radius: 12px;
     background-color: #dbeafe;
     border: 1px solid #93c5fd;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+     justify-content: flex-start;
 }
 .app-header {
     background-color: #dbeafe;
@@ -117,9 +122,23 @@ body.dark-mode .grade {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
+    width: fit-content;
+    flex-basis: 100%;
+    
 }
 .removeCourseButton:hover {
     background-color: #fecaca;
     border-color: #f87171;
     transform: translateY(-2px);
+}
+.courseCode {
+    width: 100px;
+    height:36px;
+    box-sizing:border-box;
+}
+
+.unit {
+    width: 60px;
+    height:36px;
+    box-sizing:border-box;
 }
