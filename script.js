@@ -4,7 +4,7 @@ const cgpaResult = document.getElementById("cgpaResult");
 const addlist = document.getElementById("courselist");
 const calculate = document.getElementById("calculateButton");
 const themeToggle = document.getElementById("themeToggle");
-
+const removeCourseButton = document.getElementById("removeCourseButton");
 themeToggle.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
     if (document.body.classList.contains("dark-mode")) {
@@ -27,7 +27,6 @@ newRow.innerHTML += `<select class="grade">
 <option value="1">E</option>
 <option value="0">F</option>
 </select>`;
-newRow.innerHTML += `<button type="button" class="removeCourseButton">Remove</button>`;
  courseInputs.appendChild(newRow);
 })
 
@@ -63,11 +62,6 @@ function getLetterGrade(gradePoint){
         return "F";
     }
 }
-courseInputs.addEventListener("click", function(event) {
-    if (event.target.classList.contains("removeCourseButton")) {
-        event.target.parentElement.remove();
-    }
-});
 let courses = [];
 calculate.addEventListener("click", function(){
     courses = [];
@@ -76,18 +70,18 @@ for (let row of rows){
     const courseCode = row.querySelector(".courseCode");
     const unit = row.querySelector(".unit").value;
     const grade = row.querySelector(".grade").value;
-    let normalizeCode = courseCode.value.toUpperCase();
+    let normalizeCode = courseCode.value.toUpperCase().trim();
     let course = {
     courseCode : normalizeCode,
     unit : Number(unit),
     grade:Number(grade)
 }
-if (courseCode.value === "" || unit === "" || unit <= 0 || grade === ""){
+if (normalizeCode === "" || unit === "" || unit <= 0 || !Number.isInteger(Number(unit)) || grade === ""){
     cgpaResult.innerHTML = "Please fill in all fields for each course.";
     return;
 }
  let duplicate = courses.some(function(course) {
-        return normalizeCode === course.courseCode.toUpperCase();
+        return normalizeCode === course.courseCode.toUpperCase().trim();
 });
         if (duplicate){
             cgpaResult.innerHTML = "Duplicate course code found. Please use unique course codes.";
@@ -96,5 +90,10 @@ if (courseCode.value === "" || unit === "" || unit <= 0 || grade === ""){
 courses.push(course);
 } 
 let cgpa = calculateCGPA();
-cgpaResult.innerHTML =cgpa.toFixed(2)
+cgpaResult.innerHTML =cgpa.toFixed(3)
  });
+ removeCourseButton.addEventListener("click", function() {
+     if (courseInputs.childElementCount > 1) {
+        courseInputs.lastElementChild.remove();
+     }
+});

@@ -1,8 +1,10 @@
 button{
     cursor:pointer 
+    transition all 0.2s ease;
 }
 button:hover {
     background-color: #93c5fd;
+    transform: translateY(-2px);
 }
 .button-group {
     display: flex;
@@ -108,11 +110,7 @@ body.dark-mode .grade {
     color: #f8fafc;
     border: 1px solid #475569;
 }
-.removeCourseButton {
-    margin-top: 12px;
-    margin-left: 8px;
-}
-.removeCourseButton {
+#removeCourseButton {
     background-color: #fee2e2;
     color: #991b1b;
     border: 1px solid #fca5a5;
@@ -121,12 +119,10 @@ body.dark-mode .grade {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
     width: fit-content;
-    flex-basis: 100%;
     
 }
-.removeCourseButton:hover {
+#removeCourseButton:hover {
     background-color: #fecaca;
     border-color: #f87171;
     transform: translateY(-2px);
